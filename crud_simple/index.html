@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>crud operation</title>
+</head>
+
+<body>
+    <div class="master_container">
+
+        <form>
+            <div class="main_master">
+                <label>MEETING_CENTER_CODE</label>
+                <div>
+                    <input id='myInput_Meeting_center_code' name="Meeting_center_code" type='text'>
+                </div>
+            </div>
+            <div class="main_master">
+                <label>AREA_CODE</label>
+                <div>
+                    <input id='myInput_AREA_CODE' name="AREA_CODE" type='text'>
+                </div>
+            </div>
+            <div class="main_master">
+                <label>BRANCH_CODE</label>
+                <div>
+                    <input id='myInput_BRANCH_CODE' name="BRANCH_CODE" type='text'>
+                </div>
+            </div>
+            <div class="main_master">
+                <label>LOCATION_CODE</label>
+                <div>
+                    <input id='myInput_LOCATION_CODE' name="LOCATION_CODE" type='text'>
+                </div>
+            </div>
+            <div class="form-action-buttons">
+                <input type="button" value="Search" onclick="searchTable()">
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="new_exist_master">
+        <button onclick="form_master_add()">Add</button>
+        <button>
+            <a herf="master_crud">
+                exit
+            </a>
+        </button>
+    </div>
+    <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>MEETING_CENTER_CODE</th>
+                <th>AREA_CODE</th>
+                <th>BRANCH_CODE</th>
+                <th>LOCATION_CODE</th>
+                <th>CITY_CODE</th>
+                <th>NAME</th>
+                <th>UPDATE_TIME</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody id='myTable'>
+        </tbody>
+    </table>
+    <br>
+    <div class="master_container" id="form1">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div class="main_master">
+                <label>MEETING_CENTER_CODE</label>
+                <div>
+                    <input type="text" name="Meeting_center_code" id="Meeting_center_code_master">
+                </div>
+                <div class="matser_add_new_validation"><span id="Meeting_center_code_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>AREA_CODE</label>
+                <div>
+                    <input type="text" name="AREA_CODE" id="AREA_CODE_master">
+                </div>
+                <div><span id="AREA_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>BRANCH_CODE</label>
+                <div>
+                    <input type="text" name="BRANCH_CODE" id="BRANCH_CODE_master">
+                </div>
+                <div><span id="BRANCH_CODE_master_error"></span></div>
+
+            </div>
+            <div class="main_master">
+                <label>LOCATION_CODE</label>
+                <div>
+                    <input type="text" name="LOCATION_CODE" id="LOCATION_CODE_master">
+                </div>
+                <div><span id="LOCATION_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>CITY_CODE</label>
+                <div>
+                    <input type="text" name="CITY_CODE" id="CITY_CODE_master">
+                </div>
+                <div><span id="CITY_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>NAME</label>
+                <div>
+                    <input type="text" name="NAME" id="NAME_master">
+                </div>
+                <div><span id="NAME_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>UPDATE_TIME</label>
+                <div>
+                    <input type="date" name="UPDATE_TIME" id="UPDATE_TIME_master">
+                </div>
+                <div><span id="UPDATE_TIME_master_error"></span></div>
+            </div>
+            <div class="form-action-buttons">
+                <input type="submit" value="Save" id="form1show">
+                <input type="button" value="cancel" id="form1show" onclick="form_master_cancel()">
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
